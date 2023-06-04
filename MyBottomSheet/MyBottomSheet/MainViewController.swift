@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
     // MARK: - Private properties
 
     private let openBottomSheetButton = UIButton()
+    private var bottomSheetTransitioningDelegate: BottomSheetTransitioningDelegate?
 
     // MARK: - UIViewController
 
@@ -27,7 +28,8 @@ class MainViewController: UIViewController {
     private func openBottomSheet() {
         let viewController = TestContentViewController()
         viewController.modalPresentationStyle = .custom
-        viewController.transitioningDelegate = nil
+        self.bottomSheetTransitioningDelegate = BottomSheetTransitioningDelegate()
+        viewController.transitioningDelegate = self.bottomSheetTransitioningDelegate
         self.present(viewController, animated: true)
     }
 

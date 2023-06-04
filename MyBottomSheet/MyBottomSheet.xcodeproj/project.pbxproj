@@ -13,6 +13,7 @@
 		09539C052A2CBC0E003C220D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09539C042A2CBC0E003C220D /* Assets.xcassets */; };
 		09539C082A2CBC0E003C220D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09539C062A2CBC0E003C220D /* LaunchScreen.storyboard */; };
 		09F05B702A2CC731009EBE7F /* TestContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F05B6F2A2CC731009EBE7F /* TestContentViewController.swift */; };
+		09F05B722A2CCD33009EBE7F /* BottomSheetTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F05B712A2CCD33009EBE7F /* BottomSheetTransitioningDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		09539C072A2CBC0E003C220D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09539C092A2CBC0E003C220D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09F05B6F2A2CC731009EBE7F /* TestContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestContentViewController.swift; sourceTree = "<group>"; };
+		09F05B712A2CCD33009EBE7F /* BottomSheetTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetTransitioningDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		09539BFA2A2CBC0D003C220D /* MyBottomSheet */ = {
 			isa = PBXGroup;
 			children = (
+				09F05B732A2CCD4E009EBE7F /* BottomSheet */,
 				09539BFB2A2CBC0D003C220D /* AppDelegate.swift */,
 				09539BFD2A2CBC0D003C220D /* SceneDelegate.swift */,
 				09539BFF2A2CBC0D003C220D /* MainViewController.swift */,
@@ -65,6 +68,14 @@
 				09539C092A2CBC0E003C220D /* Info.plist */,
 			);
 			path = MyBottomSheet;
+			sourceTree = "<group>";
+		};
+		09F05B732A2CCD4E009EBE7F /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				09F05B712A2CCD33009EBE7F /* BottomSheetTransitioningDelegate.swift */,
+			);
+			path = BottomSheet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				09F05B702A2CC731009EBE7F /* TestContentViewController.swift in Sources */,
 				09539C002A2CBC0D003C220D /* MainViewController.swift in Sources */,
+				09F05B722A2CCD33009EBE7F /* BottomSheetTransitioningDelegate.swift in Sources */,
 				09539BFC2A2CBC0D003C220D /* AppDelegate.swift in Sources */,
 				09539BFE2A2CBC0D003C220D /* SceneDelegate.swift in Sources */,
 			);
