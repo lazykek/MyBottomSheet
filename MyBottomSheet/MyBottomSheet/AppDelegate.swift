@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MyBottomSheer
+//  MyBottomSheet
 //
 //  Created by Ilya Cherkasov on 04.06.2023.
 //
