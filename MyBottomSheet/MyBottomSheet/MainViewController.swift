@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .lightGray
         self.configureBottomSheetButton()
     }
 
@@ -28,8 +28,12 @@ class MainViewController: UIViewController {
     private func openBottomSheet() {
         let viewController = TestContentViewController()
         viewController.modalPresentationStyle = .custom
-        self.bottomSheetTransitioningDelegate = BottomSheetTransitioningDelegate()
+        self.bottomSheetTransitioningDelegate = BottomSheetTransitioningDelegate(factory: self)
         viewController.transitioningDelegate = self.bottomSheetTransitioningDelegate
+        viewController.preferredContentSize = .init(
+            width: self.view.frame.width,
+            height: 300
+        )
         self.present(viewController, animated: true)
     }
 
@@ -51,3 +55,14 @@ class MainViewController: UIViewController {
     }
 }
 
+extension MainViewController: BottomSheetPresentationControllerFactory {
+    func makeBottomSheetPresentationController(
+        presentedViewController: UIViewController,
+        presentingViewController: UIViewController?
+    ) -> BottomSheetPresentationController {
+        BottomSheetPresentationController(
+            presentedViewController: presentedViewController,
+            presenting: presentingViewController
+        )
+    }
+}

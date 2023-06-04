@@ -11,7 +11,7 @@ final class TestContentViewController: UIViewController {
 
     // MARK: - Private properties
 
-    let stackView = UIStackView()
+    private let stackView = UIStackView()
 
     // MARK: - UIViewController
 
@@ -27,12 +27,18 @@ final class TestContentViewController: UIViewController {
 
     @objc
     private func increaseHeightButtonTapped() {
-
+        self.preferredContentSize = CGSize(
+            width: self.preferredContentSize.width,
+            height: self.preferredContentSize.height + 100
+        )
     }
 
     @objc
     private func decreaseHeightButtonTapped() {
-
+        self.preferredContentSize = CGSize(
+            width: self.preferredContentSize.width,
+            height: self.preferredContentSize.height - 100
+        )
     }
 
     // MARK: - Private methods
