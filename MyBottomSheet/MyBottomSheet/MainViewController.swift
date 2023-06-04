@@ -25,12 +25,15 @@ class MainViewController: UIViewController {
 
     @objc
     private func openBottomSheet() {
-
+        let viewController = TestContentViewController()
+        viewController.modalPresentationStyle = .custom
+        viewController.transitioningDelegate = nil
+        self.present(viewController, animated: true)
     }
 
     // MARK: - Private methods
 
-    func configureBottomSheetButton() {
+    private func configureBottomSheetButton() {
         self.view.addSubview(self.openBottomSheetButton)
         self.openBottomSheetButton.setTitle("Open Bottom Sheet", for: .normal)
         self.openBottomSheetButton.backgroundColor = .blue
