@@ -18,7 +18,9 @@ final class BottomSheetPresentationController: UIPresentationController {
     override func preferredContentSizeDidChange(
         forChildContentContainer container: UIContentContainer
     ) {
-        presentedView?.frame = calculateFrame()
+        UIView.animate(withDuration: 0.3) {
+            self.presentedView?.frame = self.calculateFrame()
+        }
     }
 
     // MARK: - Private methods
